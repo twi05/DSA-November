@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-#define TROW 1
-#define TCOL 1
+#define TROW 6
+#define TCOL 6
 
 void display(bool board[TROW][TCOL])
 {

@@ -2,7 +2,7 @@
 using namespace std;
 
 const int N = 20;
-int a[] = {12,5, 6};
+int a[] = {12, 5, 6};
 
 void merge(int l, int r, int mid)
 {
@@ -14,8 +14,9 @@ void merge(int l, int r, int mid)
 
     for (int i = 0; i < l_size; i++)
     {
-   L[i] = a[l + i];
+        L[i] = a[l + i];
     }
+
 
     for (int i = 0; i < r_size; i++)
     {

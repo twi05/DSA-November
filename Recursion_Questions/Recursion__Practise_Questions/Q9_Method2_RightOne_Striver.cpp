@@ -4,7 +4,6 @@ using namespace std;
 
 void combination(int index, int target, vector<int> ds, vector<int> &candidates, vector<vector<int>> &ans)
 {
-
     if (index == candidates.size())
     {
         if (target == 0)
@@ -22,6 +21,7 @@ void combination(int index, int target, vector<int> ds, vector<int> &candidates,
     }
     combination(index + 1, target, ds, candidates, ans);
 }
+
 vector<vector<int>> combinationSum(vector<int> &candidates, int target)
 {
     vector<vector<int>> ans;
@@ -33,7 +33,7 @@ vector<vector<int>> combinationSum(vector<int> &candidates, int target)
 
 int main()
 {
-    vector<int> candidates = {2, 3, 5};
+    vector<int> candidates = {3,5,4};
     int target = 8;
     vector<vector<int>> ans = combinationSum(candidates, target);
 

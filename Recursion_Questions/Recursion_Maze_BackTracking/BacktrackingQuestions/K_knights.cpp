@@ -2,8 +2,8 @@
 
 #include <iostream>
 using namespace std;
-#define TROW 3
-#define TCOL 3
+#define TROW 10
+#define TCOL 10
 
 void display(bool board[TROW][TCOL])
 {
@@ -100,7 +100,6 @@ void knights(int r, int c, int count, bool board[TROW][TCOL])
         return;
     }
 
-
     if (safe(r, c, board))
     {
         if (c == TCOL-1)
@@ -118,7 +117,7 @@ void knights(int r, int c, int count, bool board[TROW][TCOL])
     }
     else
     {
-        if (c == TCOL-1)
+        if (c == TCOL)
         {
             knights(r + 1, 0, count, board);
         }

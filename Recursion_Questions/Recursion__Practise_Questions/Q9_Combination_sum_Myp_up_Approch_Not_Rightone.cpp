@@ -23,8 +23,8 @@ void diceThrow(string p, vector<int> &arr, int target)
 int main()
 {
 
-    int target = 7;
-    vector<int> nums = {5,2};
+    int target = 8;
+    vector<int> nums = {3,5,4};
     diceThrow("", nums, target);
     return 0;
 }

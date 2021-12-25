@@ -31,8 +31,8 @@ int path3(int i, int j)
     {
         return 1;
     }
-    int count = path(i - 1, j);
-    count += path(i, j - 1);
+    int count = path3(i - 1, j);
+    count += path3(i, j - 1);
    return count;
 }
 
@@ -41,6 +41,6 @@ int main()
 {
     // cout << path(3, 3);
     // cout << path2(3, 3);
-  cout << path3(3, 3);
+  cout << path3(2,3);
     return 0;
 }

@@ -49,7 +49,7 @@ int row = x, col = x;
     //     }
     // }
     
- bool maze[][3] = {{true, true, true},
+ bool maze[3][3] = {{true, true, true},
         {true, true, true},
         {true, true, true},
     };

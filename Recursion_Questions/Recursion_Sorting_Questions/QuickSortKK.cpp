@@ -14,7 +14,6 @@ void quickSort(int arr[], int l, int h)
 
     if (s <= e)
     {
-
         while (arr[s] <= pivot)
         {
             s++;
@@ -32,13 +31,10 @@ void quickSort(int arr[], int l, int h)
             e--;
         }
     }
-    // temp = arr[e];
-    // arr[e] = arr[mid];
-    // arr[mid] = temp;
-
     quickSort(arr, l, e);
     quickSort(arr, s, h);
 }
+
 int main()
 {
     int arr[] = {3,2,1};

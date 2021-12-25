@@ -94,13 +94,16 @@ bool safe(int r, int c, bool board[TROW][TCOL])
 }
 void knights(int r, int c, int count, bool board[TROW][TCOL])
 {
+    
     if (count == 0)
     {
         display(board);
+        
         return;
     }
     if (r == TROW - 1 && c == TCOL)
     {
+        cout<<"yes";
         return;
     }
 
@@ -122,6 +125,6 @@ void knights(int r, int c, int count, bool board[TROW][TCOL])
 int main()
 {
     bool board[TROW][TCOL] = {false};
-    knights(0, 0, 1, board);
+    knights(0, 0, 5, board);
     return 0;
 }
