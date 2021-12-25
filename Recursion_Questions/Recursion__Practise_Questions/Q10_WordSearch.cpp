@@ -6,7 +6,6 @@ bool wordSearch(int r, int c, string word, vector<vector<char>> &board)
 {
     int const TROW = board.size(), TCOL = board[0].size();
 
-    
     if (word.empty())
     {
         return true;
@@ -21,7 +20,7 @@ bool wordSearch(int r, int c, string word, vector<vector<char>> &board)
     {
         return false;
     }
-    
+
     if (r < TROW - 1 && board[r + 1][c] == word.at(0) || board[r][c] == word.at(0))
     {
         board[r][c] = '0';

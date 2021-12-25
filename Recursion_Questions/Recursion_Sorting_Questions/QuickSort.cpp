@@ -1,55 +1,44 @@
 #include <iostream>
 using namespace std;
-void swap(int arr[], int j, int k)
-{
-
-    int temp = arr[j];
-    arr[j] = arr[k];
-    arr[k] = temp;
+void swap(int* a, int* b) 
+{ 
+    int t = *a; 
+    *a = *b; 
+    *b = t; 
 }
 
 int partition(int *arr, int l, int h)
 {
-    int s = l, e = h ;
-    int mid = (l+h)/2;
-    // int pivot = arr[mid];
-    // swap(mid, h);
-   
+    int s = l, e = h;
+    int mid = (l + h) / 2;
     int pivot = arr[l];
 
     while (s < e)
     {
 
-        do
-        {
+        while (arr[s] <= pivot && s<h )
             s++;
-        } while (arr[s] <= pivot);
+      
 
-        do
-        {
+        while (arr[e] > pivot  )
             e--;
 
-        } while (arr[e] > pivot);
-        if (s <= e)
+        if (s < e)
         {
-            swap(arr, s, e);
+            swap( &arr[s], &arr[e]);
         }
     }
 
-    swap(arr, e, h);
-
+    swap(&arr[e], &arr[l]);
     return e;
 }
 
 void quickSort(int *arr, int l, int h)
 {
-
     if (l < h)
     {
-
         int pivot = partition(arr, l, h);
-
-        quickSort(arr, l, pivot);
+        quickSort(arr, l, pivot-1);
         quickSort(arr, pivot + 1, h);
     }
 }
@@ -64,15 +53,15 @@ void printArray(int A[], int size)
 
 int main()
 {
-
-    int arr[] = {3, 55, 20, 1,6611};
+    // int arr[] = {4,3,2,1};
+    int arr[] = {3, 55, 20, 1, 4, 21};
 
     int arr_size = sizeof(arr) / sizeof(arr[0]);
-//  arr[arr_size] = INT_MAX;
+    //  arr[arr_size] = INT_MAX;s
     printf("Given array is \n");
     printArray(arr, arr_size);
 
-    quickSort(arr, 0, arr_size-1);
+    quickSort(arr, 0, arr_size - 1);
 
     printf("\nSorted array is \n");
     printArray(arr, arr_size);
