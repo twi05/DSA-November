@@ -6,10 +6,11 @@ void print(string ch){
 }
 int main(){
 
-string str = "asdf";
+// string str = "asdf";
+char str = 'a';
 
-cout<<str;
-print(str+'0');
+cout<<str+0;
+// print(str);
 
 return 0;
 }
