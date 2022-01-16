@@ -9,7 +9,7 @@ int main(){
 string str = "asdf";
 
 cout<<str;
-print(str+0);
+print(str+'0');
 
 return 0;
 }

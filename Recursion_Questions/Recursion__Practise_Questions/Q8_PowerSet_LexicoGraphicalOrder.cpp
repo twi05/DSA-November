@@ -21,8 +21,6 @@ void powerSet(string p, string up)
 }
 int main()
 {
-
-    powerSet("", "abcdef");
-
+    powerSet("", "122");
     return 0;
 }

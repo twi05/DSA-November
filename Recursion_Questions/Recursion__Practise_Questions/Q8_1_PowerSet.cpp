@@ -67,7 +67,7 @@ vector<string> powerSet_Vec(string str, int powerset_size, vector<string> &ans)
 }
 int main()
 {
-    string str = "cab";
+    string str = "122";
  sort(str.begin(), str.end());
     int powerset_size = pow(2, str.length());
 
