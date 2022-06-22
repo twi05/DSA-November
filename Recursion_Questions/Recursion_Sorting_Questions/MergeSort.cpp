@@ -1,29 +1,27 @@
 #include <iostream>
 using namespace std;
 
-const int N = 20;
-int a[] = {12, 5, 6};
+int a[] = {5, 4, 3, 2, 1};
 
 void merge(int l, int r, int mid)
 {
     int l_size = mid - l + 1;
-    int L[l_size + 1];
+    int L[l_size];
 
     int r_size = r - (mid + 1) + 1;
-    int R[r_size + 1];
+    int R[r_size];
 
     for (int i = 0; i < l_size; i++)
     {
         L[i] = a[l + i];
     }
 
-
     for (int i = 0; i < r_size; i++)
     {
         R[i] = a[mid + 1 + i];
     }
 
-    L[l_size] = R[r_size] = INT_MAX;
+    // L[l_size] = R[r_size] = INT_MAX;
 
     int l_i = 0;
     int r_i = 0;

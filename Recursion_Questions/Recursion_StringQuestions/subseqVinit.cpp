@@ -46,22 +46,22 @@ vector<string> subSeq(string p, string up){
 }
 
 
-// vector<string> subSeq(string p, string up){
+vector<string> subSeq3(string p, string up){
 
-//     if (up.empty()){
-//         vector<string> str;
-//         str.push_back(p);
-//         return str;
-//     }
+    if (up.empty()){
+        vector<string> str;
+        str.push_back(p);
+        return str;
+    }
 
-//     vector<string> left = subSeq(p + up.at(0), up.substr(1));
-//     vector<string> right = subSeq(p, up.substr(1));
-//     vector<string> third = subSeq(p  + (up.at(0) + 0), up.substr(1));
+    vector<string> left = subSeq(p + up.at(0), up.substr(1));
+    vector<string> right = subSeq(p, up.substr(1));
+    vector<string> third = subSeq(p  + up.at(0) , up.substr(1));
 
-//     left.insert(left.end(),right.begin(),right.end());
-//     left.insert(left.end(),third.begin(),third.end());
-//     return left;
-// }
+    left.insert(left.end(),right.begin(),right.end());
+    left.insert(left.end(),third.begin(),third.end());
+    return left;
+}
 
 
 
@@ -69,7 +69,7 @@ int main(){
 
     subseq("","abc");
     cout<<endl<<endl;
-    vector<string> str = subSeq("","abc");
+    vector<string> str = subSeq3("","abc");
     for(auto &i : str){
         cout<<i<<endl;
     }
